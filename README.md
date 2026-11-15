@@ -64,7 +64,7 @@ MySQL (data audit, cleaning, and analysis) · Power BI (visualizations, coming s
 
 - 1,459 of 5,000 visits (29.2%) had a recorded need for an interpreter.
 - Of the 1,447 visits with a known outcome, **420 (29.0%) did not receive a professional interpreter**.
-- 12 visits that needed an interpreter had an unknown outcome and were excluded from the percentage.
+- 12 visits needed an interpreter had an unknown outcome and were excluded from the percentage.
 
 **Unmet need by department** (visits with a known outcome)
 
@@ -78,7 +78,7 @@ MySQL (data audit, cleaning, and analysis) · Power BI (visualizations, coming s
 
 **Unmet need by hospital**
 
-| Hospital | Visits needing an interpreter | Unmet | Unmet % |
+| Hospital | Visits with known outcome | Unmet | Unmet % |
 |---|---|---|---|
 | Central | 458 | 139 | 30.3% |
 | South | 494 | 141 | 28.5% |
@@ -109,10 +109,10 @@ The gap is spread across all three hospitals (28–30%), but varies more by depa
 
 ## Repository Structure
 
-```
-01_data_audit.sql     duplicates, row counts, value checks
-02_cleaning.sql       deduplicated and standardized views
-03_analysis.sql       unmet need by hospital, department, and reason
-04_validation.sql     totals and consistency checks
+00_create_database.sql        create and select the database
+01_data_audit.sql             duplicates, row counts, value checks
+02_cleaning.sql               deduplicated and standardized views
+03_analysis.sql               unmet need by hospital, department, and reason
+04_validation.sql             totals and consistency checks
+interpreter_visits_clean.csv  final clean table exported for Power BI
 README.md
-```
